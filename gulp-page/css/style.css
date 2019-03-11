@@ -103,6 +103,11 @@ a {
   width: 75px;
   position: relative;
   flex-shrink: 0; }
+  .header-icon:hover {
+    background: #E2DEE0;
+    width: 150px;
+    transition: all 1s;
+  }
   .header-icon i.fa.fa-search {
     position: absolute;
     top: 27px;
@@ -115,6 +120,11 @@ a {
     height: 75px;
     line-height: 75px;
     background-color: lightgrey; }
+  .header-icon form:hover {
+    background: #E2DEE0;
+    width: 150px;
+    transition: all 1s;
+  }
   .header-icon button {
     height: 100%;
     width: 100%;
@@ -129,8 +139,12 @@ input[type=search] {
   cursor: pointer;
   background: initial;
   border: none;
-  max-width: 75px; }
-
+  width: 75px;
+  height: 30px; }
+.header-icon input:hover {
+  width: 140px;
+  transition: all 1s;
+}
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button {
   display: none; }
@@ -139,7 +153,7 @@ input[type=search]:hover {
   background-color: initial; }
 
 input[type=search]:focus {
-  padding-left: 32px;
+  padding-left: 12px;
   color: #000;
   background-color: #fff;
   cursor: auto; }
@@ -184,10 +198,9 @@ input[type=search]:focus {
 
 .modalwin {
   text-align: center;
-  height: 200px;
-  width: 300px;
-  background: black;
-  top: 20%;
+  height: 300px;
+  width: 400px;
+  top: 35%;
   right: 0;
   left: 0;
   font-size: 14px;
@@ -197,13 +210,15 @@ input[type=search]:focus {
   position: fixed;
   padding: 15px;
   border-radius: 9px;
-  box-shadow: rgba(6, 6, 6, 0.8) 0 0 27px 19px; }
+  background: #F35A5F; }
   .modalwin input[type="text"] {
-    margin-top: 15px;
-    min-height: 31px;
+    margin-top: 30px;
+    min-height: 40px;
     color: #383838;
     border-radius: 5px;
-    font-size: 15px; }
+    font-size: 17px;
+    min-width: 80%;
+  padding-left: 10px; }
   .modalwin input[type="button"] {
     height: 45px;
     width: 20%;
@@ -213,8 +228,8 @@ input[type=search]:focus {
     color: #fff; }
   .modalwin h3 {
     color: #fff;
-    padding-bottom: 10px;
-    font-size: 21px;
+    padding-bottom: 25px;
+    font-size: 26px;
     font-family: GothamBook; }
   .modalwin form {
     display: flex;
@@ -385,8 +400,11 @@ input[type=search]:focus {
   text-transform: uppercase;
   color: #FFFFFF;
   border-top: 0;
-  border-right: 0; }
-
+  border-right: 0;
+  cursor: pointer; }
+.search-button:hover {
+  background-color: #F35A5F;
+}
 .main-block-content {
   position: relative;
   align-items: center;
@@ -395,19 +413,23 @@ input[type=search]:focus {
 
 input.info::-webkit-input-placeholder {
   color: #fff;
-  font-family: GothamBook; }
+  font-family: GothamBook;
+  padding-left: 10px }
 
 ::-moz-placeholder {
   color: #fff;
-  font-family: GothamBook; }
+  font-family: GothamBook;
+  padding-left: 10px }
 
 :-ms-input-placeholder {
   color: #fff;
-  font-family: GothamBook; }
+  font-family: GothamBook;
+  padding-left: 10px }
 
 :-moz-placeholder {
   color: #fff;
-  font-family: GothamBook; }
+  font-family: GothamBook;
+  padding-left: 10px }
 
 .nav-wrap {
   width: 100%;
@@ -488,7 +510,8 @@ input.info::-webkit-input-placeholder {
         border: none;
         display: flex;
         justify-content: center;
-        align-items: center; }
+        align-items: center;
+        cursor: pointer; }
         .nav-wrap .choice-menu .nav-section button .fa-bus {
           font-size: 22px;
           color: #fff; }
@@ -795,7 +818,8 @@ input.info::-webkit-input-placeholder {
   line-height: 7.5em;
   padding: 0 1.5em;
   text-align: center;
-  display: inline-block; }
+  display: inline-block;
+}
 
 .line {
   height: 1px;
@@ -806,8 +830,8 @@ input.info::-webkit-input-placeholder {
   margin: 0 4px; }
 
 #container label:hover {
-  background: initial;
   border: 1px solid #1BAF5D;
+  background-color: #F0FFFF;
   cursor: pointer; }
 
 h2 {
@@ -866,6 +890,26 @@ i.fa.fa-leaf {
   justify-content: center;
   padding-left: 25px;
   width: 48.5%;
+  font-family: GothamBook; }
+
+#content-3 ol {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 10px;
+  font-family: GothamBook;
+  line-height: 33px; }
+
+#content-4 p {
+  display: flex;
+  justify-content: center;
+  width: 48.5%;
+  font-family: GothamBook; }
+  
+#content-5 p {
+  display: flex;
+  justify-content: center;
+  padding: 0 25px;
   font-family: GothamBook; }
 
 #tab-1 + label {
@@ -1029,10 +1073,11 @@ input.email-adress::-webkit-input-placeholder {
       letter-spacing: 0.5px;
       font-family: GothamBook;
       padding-top: 8px; }
-  .footer-section .main-footer-section .catalog-item {
+  .footer-section .main-footer-section a.catalog-item {
     font-size: 17px;
     text-decoration: underline;
     text-decoration-color: #c0bebc;
+    text-transform: none;
     color: #fff;
     display: flex;
     min-height: 56px;

@@ -544,6 +544,7 @@ input.info::-webkit-input-placeholder {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			cursor: pointer;
 			.fa-bus{
 				font-size: 22px;
 				color: #fff;
@@ -1162,10 +1163,11 @@ input.email-adress::-webkit-input-placeholder{
 					padding-top: 8px;
 				}
 			}
-		.catalog-item{
+		a.catalog-item{
 			font-size: 17px;
 			text-decoration: underline;
 			text-decoration-color: rgb(192, 190, 188);
+			text-transform: none;
 			color: #fff;
 			display: flex;
 			min-height: 56px;
